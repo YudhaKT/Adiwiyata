@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TambahTnmnActivity"
+    android:padding="8dp"
+    android:background="@drawable/list_tanaman">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah Tumbuhan"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal">
+            <ImageView
+                android:id="@+id/tv_imageUrl"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="1dp"
+                android:background="@android:color/darker_gray"
+                tools:srcCompat="@drawable/sample"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:text="Nama"
+                android:textColor="@android:color/black"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text=":"/>
+
+            <EditText
+                android:id="@+id/et_nama"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="Masukkan Nama Tumbuhan"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Ilmiah"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text=":"/>
+
+            <EditText
+                android:id="@+id/et_latin"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan Nama Ilmiah Tumbuhan"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Kingdom"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text=":"/>
+
+            <EditText
+                android:id="@+id/et_kingdom"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan Kingdom"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Clade"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text=":"/>
+
+            <EditText
+                android:id="@+id/et_clade"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan Clade"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Order"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text=":"/>
+
+            <EditText
+                android:id="@+id/et_order"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan Clade"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Family"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text=":"/>
+
+            <EditText
+                android:id="@+id/et_family"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan Family"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Genus"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text=":"/>
+
+            <EditText
+                android:id="@+id/et_genus"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan Genus"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Species"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text=":"/>
+
+            <EditText
+                android:id="@+id/et_species"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan Species"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Deskripsi"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text=":"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_deskripsi"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:minLines="4"
+            android:gravity="center_vertical"
+            android:maxLines="10"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textSize="12sp"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="10dp"
+            />
+
+
+        <Button
+            android:id="@+id/btn_tambah"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Tambah"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"/>
+
+    </LinearLayout>
+
+
+</ScrollView>

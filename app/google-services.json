@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "511350529039",
+    "project_id": "adiwiyata-87b9a",
+    "storage_bucket": "adiwiyata-87b9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511350529039:android:c1c63888980a86aa7b577a",
+        "android_client_info": {
+          "package_name": "com.example.adiwiyata_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511350529039-01dnffkp74ch130jf4m1p1t3eno7pi9l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw_QAtoT3xuAWEqq5r5EQr35dX6BLDVkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "511350529039-01dnffkp74ch130jf4m1p1t3eno7pi9l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
