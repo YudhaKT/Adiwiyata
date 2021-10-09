@@ -98,4 +98,4 @@ public class TnmnActivity extends AppCompatActivity {
     }
 
 }
-/**Halo yud */
+/**Halo yud iki munir*/
