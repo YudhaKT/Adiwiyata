@@ -92,13 +92,13 @@ public class EditTnmnActivity extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-
+                    /**Method sengaja dibiarkan tanpa adanya perintah dengan diberikan statement kosong*/
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-
+                    /**Method sengaja dibiarkan tanpa adanya perintah dengan diberikan statement kosong*/
                     }
                 });
 
@@ -163,7 +163,7 @@ public class EditTnmnActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+            /**Method sengaja dibiarkan tanpa adanya perintah dengan diberikan statement kosong*/
             }
         });
         IvImageUrl.setOnClickListener(new View.OnClickListener() {
