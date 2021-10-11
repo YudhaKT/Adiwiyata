@@ -213,7 +213,7 @@ public class EditTnmnActivity extends AppCompatActivity {
                             v.getParent().requestDisallowInterceptTouchEvent(false);
                             return true;
                         default:
-                            //Tidak melakukan apa-apa
+                            //Tidak melakukan aksi
                     }
                 }
                 return false;
