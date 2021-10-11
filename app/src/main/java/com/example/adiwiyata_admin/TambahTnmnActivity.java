@@ -31,8 +31,15 @@ import com.google.firebase.storage.UploadTask;
 
 
 public class TambahTnmnActivity extends AppCompatActivity{
-    EditText etLatin, etNama, etKingdom, etClade, etOrder, etFamily, etGenus, etSpecies, etDeskripsi;
-
+    EditText etLatin;
+    EditText etNama;
+    EditText etKingdom;
+    EditText etClade;
+    EditText etOrder;
+    EditText etFamily;
+    EditText etGenus;
+    EditText etSpecies;
+    EditText etDeskripsi;
     ImageView IvImageUrl;
     String etImageUrl = "";
     Integer Total;

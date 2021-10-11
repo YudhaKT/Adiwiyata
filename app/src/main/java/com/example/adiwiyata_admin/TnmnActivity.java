@@ -22,11 +22,27 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 public class TnmnActivity extends AppCompatActivity {
-    TextView tvNama, tvLatin, tvKingdom, tvClade, tvOrder, tvFamily, tvGenus, tvSpecies;
+    TextView tvNama;
+    TextView tvLatin;
+    TextView tvKingdom;
+    TextView tvClade;
+    TextView tvOrder;
+    TextView tvFamily;
+    TextView tvGenus;
+    TextView tvSpecies;
+    
     ImageView ivImageUrl;
     ImageButton btnBack;
-    String temp_latin, temp_nama,temp_imageUrl,temp_kingdom, temp_clade, temp_order, temp_family, temp_genus, temp_species;
-
+    String temp_latin;
+    String temp_nama;
+    String temp_imageUrl;
+    String temp_kingdom;
+    String temp_clade;
+    String temp_order;
+    String temp_family;
+    String temp_genus;
+    String temp_species;
+    
     DatabaseReference databaseReference;
 
     @Override
