@@ -294,7 +294,7 @@ public class EditTnmnActivity extends AppCompatActivity {
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
-
+                /**Method yang disengaja kosong. Tidak suatu perintah*/
                 }
             });
         }
