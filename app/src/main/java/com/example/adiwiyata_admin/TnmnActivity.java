@@ -100,7 +100,7 @@ public class TnmnActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+            /**Method sengaja dibiarkan tanpa adanya perintah dengan diberikan statement kosong*/
             }
         });
 
