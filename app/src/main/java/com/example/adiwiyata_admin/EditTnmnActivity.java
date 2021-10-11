@@ -33,8 +33,27 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 public class EditTnmnActivity extends AppCompatActivity {
-    EditText etLatin, etNama, etKingdom, etClade, etOrder, etFamily, etGenus, etSpecies, etDeskripsi;
-    String id_temp, temp_latin, temp_nama, temp_imageUrl, temp_kingdom, temp_clade, temp_order, temp_family, temp_genus, temp_species, temp_deskripsi;
+    EditText etLatin;
+    EditText etNama;
+    EditText etKingdom;
+    EditText etClade;
+    EditText etOrder;
+    EditText etFamily;
+    EditText etGenus;
+    EditText etSpecies;
+    EditText etDeskripsi;
+    String id_temp;
+    String temp_latin;
+    String temp_nama;
+    String temp_imageUrl;
+    String temp_kingdom;
+    String temp_clade;
+    String temp_order;
+    String temp_family;
+    String temp_genus;
+    String temp_species;
+    String temp_deskripsi;
+    
     ImageView IvImageUrl;
     String etImageUrl;
     Integer Total;
