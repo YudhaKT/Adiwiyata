@@ -25,7 +25,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListTanaman extends AppCompatActivity {
-    List<Tanaman> fetchData, fetchData2;
+    List<Tanaman> fetchData;
+    List<Tanaman> fetchData2;
     RecyclerView recyclerView;
     MyAdapter myAdapter;
     TextView tvJumlah;
