@@ -230,6 +230,7 @@ public class TambahTnmnActivity extends AppCompatActivity{
 
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
+                            /**Method sengaja dibiarkan tanpa adanya perintah dengan diberikan statement kosong*/
                         }
                     });
 
