@@ -159,6 +159,8 @@ public class TambahTnmnActivity extends AppCompatActivity{
                         case MotionEvent.ACTION_SCROLL:
                             v.getParent().requestDisallowInterceptTouchEvent(false);
                             return true;
+                    default:
+                            //Tidak melakukan aksi
                     }
                 }
                 return false;
