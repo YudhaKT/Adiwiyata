@@ -43,7 +43,7 @@ public class qrscanner extends AppCompatActivity implements ZXingScannerView.Res
 
                     @Override
                     public void onPermissionDenied(PermissionDeniedResponse permissionDeniedResponse) {
-
+                    /**Method sengaja dibiarkan tanpa adanya perintah dengan diberikan statement kosong*/
                     }
 
                     @Override
@@ -72,6 +72,7 @@ public class qrscanner extends AppCompatActivity implements ZXingScannerView.Res
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+                /**Method sengaja dibiarkan tanpa adanya perintah dengan diberikan statement kosong*/
             }
         });
     }
