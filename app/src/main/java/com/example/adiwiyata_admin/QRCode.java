@@ -1,7 +1,6 @@
 package com.example.adiwiyata_admin;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Point;
@@ -17,18 +16,13 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
 import androidmads.library.qrgenearator.QRGContents;
 import androidmads.library.qrgenearator.QRGEncoder;
-import androidmads.library.qrgenearator.QRGSaver;
 
 public class QRCode extends AppCompatActivity {
     String TAG = "GenerateQRCode";
