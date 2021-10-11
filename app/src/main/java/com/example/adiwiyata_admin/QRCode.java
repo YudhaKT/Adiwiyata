@@ -34,7 +34,8 @@ public class QRCode extends AppCompatActivity {
     String TAG = "GenerateQRCode";
     EditText edtValue;
     ImageView qrImage;
-    Button start, save;
+    Button start;
+    Button save;
     ImageButton btnBack;
     String inputValue;
     String savePath = Environment.getExternalStorageDirectory().getPath() + "/QRCode/";
@@ -45,13 +46,11 @@ public class QRCode extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_q_r_code);
-
         qrImage = findViewById(R.id.QR_Image);
         edtValue = findViewById(R.id.edt_value);
         btnBack = findViewById(R.id.btn_back);
         start = findViewById(R.id.start);
         save = findViewById(R.id.save);
-
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
