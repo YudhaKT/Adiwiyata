@@ -72,7 +72,8 @@ public class MyAdapter extends RecyclerView.Adapter {
     }
 
     public class ViewHolderClass extends RecyclerView.ViewHolder{
-        TextView nama, latin;
+        TextView nama;
+        TextView latin;
         String imagePath;
         ImageView imageUrl;
 
