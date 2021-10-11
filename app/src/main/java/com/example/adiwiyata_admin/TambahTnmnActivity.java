@@ -76,13 +76,13 @@ public class TambahTnmnActivity extends AppCompatActivity{
                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                    @Override
                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-
+                    /**Method yang disengaja kosong. Tidak suatu perintah*/
                    }
                })
                .addOnFailureListener(new OnFailureListener() {
                    @Override
                    public void onFailure(@NonNull Exception e) {
-
+                    /**Method yang disengaja kosong. Tidak suatu perintah*/
                    }
                });
 
@@ -140,7 +140,7 @@ public class TambahTnmnActivity extends AppCompatActivity{
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+            /**Method yang disengaja kosong. Tidak suatu perintah*/
             }
         });
         etDeskripsi.setOnTouchListener(new View.OnTouchListener() {
@@ -214,7 +214,7 @@ public class TambahTnmnActivity extends AppCompatActivity{
                                 myref2.setValue(Total).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
-
+                                    /**Method yang disengaja kosong. Tidak suatu perintah*/
                                     }
                                 });
                                 finish();
