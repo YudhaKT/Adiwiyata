@@ -81,7 +81,6 @@ public class QRCode extends AppCompatActivity {
                 //to get the image from the ImageView (say iv)
                 BitmapDrawable draw = (BitmapDrawable) qrImage.getDrawable();
                 Bitmap bitmap = draw.getBitmap();
-                Context context = null;
 
                 FileOutputStream outStream = null;
                 //File sdCard = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
