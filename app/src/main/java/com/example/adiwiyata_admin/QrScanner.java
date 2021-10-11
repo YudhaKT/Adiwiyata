@@ -23,7 +23,7 @@ import com.karumi.dexter.listener.single.PermissionListener;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
-public class qrScanner extends AppCompatActivity implements ZXingScannerView.ResultHandler {
+public class QrScanner extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
     ZXingScannerView scannerView;
     DatabaseReference databaseReference;
@@ -62,11 +62,11 @@ public class qrScanner extends AppCompatActivity implements ZXingScannerView.Res
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(!dataSnapshot.exists()) {
-                    Toast.makeText(qrScanner.this, "Maaf, data tidak ditemukan", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QrScanner.this, "Maaf, data tidak ditemukan", Toast.LENGTH_SHORT).show();
                     finish();
                 }
                 else {
-                    startActivity(new Intent(qrScanner.this, TnmnActivity.class).putExtra("nama", data));
+                    startActivity(new Intent(QrScanner.this, TnmnActivity.class).putExtra("nama", data));
                 }
             }
 
