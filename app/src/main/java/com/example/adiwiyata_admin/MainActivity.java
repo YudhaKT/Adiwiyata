@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity{
             case R.id.add_qr :
                 startActivity(new Intent(MainActivity.this, QRCode.class));
                 break;
+            default:
+                //Tidak melakukan aksi
         }
     }
 
