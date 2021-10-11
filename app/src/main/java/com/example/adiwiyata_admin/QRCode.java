@@ -1,7 +1,6 @@
 package com.example.adiwiyata_admin;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
