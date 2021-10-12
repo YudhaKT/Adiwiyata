@@ -72,7 +72,6 @@ public class ListTanaman extends AppCompatActivity {
                     }
                 });
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(ListTanaman.this, "Maaf Terjadi kesalahan... coba beberapa saat lagi!", Toast.LENGTH_SHORT).show();
@@ -90,12 +89,10 @@ public class ListTanaman extends AppCompatActivity {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             /**Method yang disengaja kosong. Tidak suatu perintah*/
             }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
             /**Method yang disengaja kosong. Tidak suatu perintah*/
             }
-
             @Override
             public void afterTextChanged(Editable s) {
                 databaseReference.orderByChild("nama").addListenerForSingleValueEvent(new ValueEventListener() {
