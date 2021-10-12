@@ -14,14 +14,16 @@ public class Tanaman {
     private String genus;
     private String species;
     private String deskripsi;
-
-    public String getId() {
-        return id;
-        //untuk mengambil id tanaman
-    }
-
+    
+        //untuk mengeset id tanaman
     public void setId(String id) {
         this.id = id;
+    }
+    
+    //untuk mengambil id tanaman
+    public String getId() {
+        return id;
+        
     }
 
     public String getNama() {
