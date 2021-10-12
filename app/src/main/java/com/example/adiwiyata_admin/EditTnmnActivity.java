@@ -51,7 +51,7 @@ public class EditTnmnActivity extends AppCompatActivity {
     String temp_genus;
     String temp_species;
     String temp_deskripsi;
-    
+
     ImageView IvImageUrl;
     String etImageUrl;
     Integer Total;
@@ -93,16 +93,39 @@ public class EditTnmnActivity extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    /**Method sengaja dibiarkan tanpa adanya perintah dengan diberikan statement kosong*/
+                        /**Method sengaja dibiarkan tanpa adanya perintah dengan diberikan statement kosong*/
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                    /**Method sengaja dibiarkan tanpa adanya perintah dengan diberikan statement kosong*/
+                        /**Method sengaja dibiarkan tanpa adanya perintah dengan diberikan statement kosong*/
                     }
                 });
 
+    }
+
+    private void setGambar(Uri uri, ImageView image)
+    {
+        Glide.with(image.getContext())
+                .load(uri.toString())
+                .into(image);
+    }
+
+    private void setPictureIntent(Intent intent)
+    {
+        intent.setType("image/*");
+        intent.setAction(intent.ACTION_GET_CONTENT);
+        startActivityForResult(intent, 1);
+    }
+    private void referenceStorage(String imageUrl, ImageView cImage)
+    {
+        storageRef.child(imageUrl).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                setGambar(uri, cImage);
+            }
+        });
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -142,14 +165,7 @@ public class EditTnmnActivity extends AppCompatActivity {
                 temp_deskripsi = dataSnapshot.child("deskripsi").getValue().toString();
                 id_temp = dataSnapshot.child("id").getValue().toString();
                 etImageUrl = temp_imageUrl;
-                storageRef.child(temp_imageUrl).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                    @Override
-                    public void onSuccess(Uri uri) {
-                        Glide.with(IvImageUrl.getContext())
-                                .load(uri.toString())
-                                .into(IvImageUrl);
-                    }
-                });
+                referenceStorage(temp_imageUrl, IvImageUrl);
                 etLatin.setText(temp_latin);
                 etNama.setText(temp_nama);
                 etKingdom.setText(temp_kingdom);
@@ -160,27 +176,20 @@ public class EditTnmnActivity extends AppCompatActivity {
                 etSpecies.setText(temp_species);
                 etDeskripsi.setText(temp_deskripsi);
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-            /**Method sengaja dibiarkan tanpa adanya perintah dengan diberikan statement kosong*/
+                /**Method sengaja dibiarkan tanpa adanya perintah dengan diberikan statement kosong*/
             }
         });
         IvImageUrl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 choosePicture();
-
             }
-
             private void choosePicture() {
                 Intent intent = new Intent();
-                intent.setType("image/*");
-                intent.setAction(intent.ACTION_GET_CONTENT);
-                startActivityForResult(intent, 1);
-
+                setPictureIntent(intent);
             }
-
         });
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -194,7 +203,6 @@ public class EditTnmnActivity extends AppCompatActivity {
                 hapusData();
             }
         });
-
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -221,17 +229,17 @@ public class EditTnmnActivity extends AppCompatActivity {
 
     private void updateData(){
 
-                final String nama = etNama.getText().toString();
-                final String latin = etLatin.getText().toString();
-                final String imageUrl = etImageUrl;
-                final String kingdom = etKingdom.getText().toString();
-                final String clade  = etClade.getText().toString();
-                final String order  = etOrder.getText().toString();
-                final String family = etFamily.getText().toString();
-                final String genus = etGenus.getText().toString();
-                final String species  = etSpecies.getText().toString();
-                final String deskripsi = etDeskripsi.getText().toString();
-                final String id = id_temp;
+        final String nama = etNama.getText().toString();
+        final String latin = etLatin.getText().toString();
+        final String imageUrl = etImageUrl;
+        final String kingdom = etKingdom.getText().toString();
+        final String clade  = etClade.getText().toString();
+        final String order  = etOrder.getText().toString();
+        final String family = etFamily.getText().toString();
+        final String genus = etGenus.getText().toString();
+        final String species  = etSpecies.getText().toString();
+        final String deskripsi = etDeskripsi.getText().toString();
+        final String id = id_temp;
         if (latin.equals("") || nama.equals("") || imageUrl.equals("") || kingdom.equals("") || clade.equals("") || order.equals("") || family.equals("") || genus.equals("") || species.equals("") || deskripsi.equals("")){
             Toast.makeText(EditTnmnActivity.this, "Data Harus diisi semua!!", Toast.LENGTH_SHORT).show();
         }else {
@@ -299,7 +307,7 @@ public class EditTnmnActivity extends AppCompatActivity {
             });
         }
 
-            }
+    }
     private void hapusData(){
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle("Warning")
@@ -309,15 +317,15 @@ public class EditTnmnActivity extends AppCompatActivity {
                 .show();
         Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
         positiveButton.setOnClickListener(new View.OnClickListener() {
-              @Override
-              public void onClick(View v) {
-                  myref.removeValue();
-                  mystor.child(temp_imageUrl).delete();
-                  ListTanaman.getInstance().finish();
-                  startActivity(new Intent(EditTnmnActivity.this, ListTanaman.class));
-                  EditTnmnActivity.getInstance().finish();
-              }
-          });
+            @Override
+            public void onClick(View v) {
+                myref.removeValue();
+                mystor.child(temp_imageUrl).delete();
+                ListTanaman.getInstance().finish();
+                startActivity(new Intent(EditTnmnActivity.this, ListTanaman.class));
+                EditTnmnActivity.getInstance().finish();
+            }
+        });
 
     }
     public static EditTnmnActivity getInstance()
