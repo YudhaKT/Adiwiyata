@@ -68,15 +68,15 @@ public class TnmnActivity extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                temp_clade = dataSnapshot.child("clade").getValue().toString();
-                temp_family = dataSnapshot.child("family").getValue().toString();
                 temp_latin = dataSnapshot.child("latin").getValue().toString();
-                temp_species= dataSnapshot.child("species").getValue().toString();
                 temp_nama = dataSnapshot.child("nama").getValue().toString();
                 temp_imageUrl = dataSnapshot.child("imageUrl").getValue().toString();
                 temp_kingdom = dataSnapshot.child("kingdom").getValue().toString();
+                temp_clade = dataSnapshot.child("clade").getValue().toString();
                 temp_order = dataSnapshot.child("order").getValue().toString();
+                temp_family = dataSnapshot.child("family").getValue().toString();
                 temp_genus = dataSnapshot.child("genus").getValue().toString();
+                temp_species= dataSnapshot.child("species").getValue().toString();
 
                 storageRef.child(temp_imageUrl).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
