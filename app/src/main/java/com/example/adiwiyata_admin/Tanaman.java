@@ -105,20 +105,6 @@ public class Tanaman {
     public void setDeskripsi(String deskripsi) {
         this.deskripsi= deskripsi;
     }
-
-    public Tanaman(String id, String nama, String latin, String imageUrl, String kingdom, String clade, String order, String family, String genus, String species, String deskripsi) {
-        this.id = id;
-        this.nama = nama;
-        this.latin = latin;
-        this.imageUrl = imageUrl;
-        this.kingdom = kingdom;
-        this.clade = clade;
-        this.order = order;
-        this.family = family;
-        this.genus = genus;
-        this.species = species;
-        this.deskripsi = deskripsi;
-    }
     
     public Tanaman(String[] value)
     {
