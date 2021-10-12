@@ -65,6 +65,24 @@ public class EditTnmnActivity extends AppCompatActivity {
     DatabaseReference myref2;
     DatabaseReference databaseReference;
     StorageReference mystor;
+    StorageReference storageRef = FirebaseStorage.getInstance().getReference();
+    etNama = findViewById(R.id.et_nama);
+    etLatin = findViewById(R.id.et_latin);
+    IvImageUrl = findViewById(R.id.tv_imageUrl);
+    etKingdom = findViewById(R.id.et_kingdom);
+    etClade = findViewById(R.id.et_clade);
+    etOrder = findViewById(R.id.et_order);
+    etFamily = findViewById(R.id.et_family);
+    etGenus = findViewById(R.id.et_genus);
+    etSpecies = findViewById(R.id.et_species);
+    etDeskripsi = findViewById(R.id.et_deskripsi);
+    etDeskripsi.setMovementMethod(new ScrollingMovementMethod());
+    btnUpdate = findViewById(R.id.btn_update);
+    btnHapus = findViewById(R.id.btn_hapus);
+    btnBack = findViewById(R.id.btn_back);
+    database = FirebaseDatabase.getInstance();
+    mystor = FirebaseStorage.getInstance().getReference();
+    myref = database.getReference().child("tnmn").child(id);
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -109,24 +127,7 @@ public class EditTnmnActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_tnmn);
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
-        StorageReference storageRef = FirebaseStorage.getInstance().getReference();
-        etNama = findViewById(R.id.et_nama);
-        etLatin = findViewById(R.id.et_latin);
-        IvImageUrl = findViewById(R.id.tv_imageUrl);
-        etKingdom = findViewById(R.id.et_kingdom);
-        etClade = findViewById(R.id.et_clade);
-        etOrder = findViewById(R.id.et_order);
-        etFamily = findViewById(R.id.et_family);
-        etGenus = findViewById(R.id.et_genus);
-        etSpecies = findViewById(R.id.et_species);
-        etDeskripsi = findViewById(R.id.et_deskripsi);
-        etDeskripsi.setMovementMethod(new ScrollingMovementMethod());
-        btnUpdate = findViewById(R.id.btn_update);
-        btnHapus = findViewById(R.id.btn_hapus);
-        btnBack = findViewById(R.id.btn_back);
-        database = FirebaseDatabase.getInstance();
-        mystor = FirebaseStorage.getInstance().getReference();
-        myref = database.getReference().child("tnmn").child(id);
+        
         myref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
