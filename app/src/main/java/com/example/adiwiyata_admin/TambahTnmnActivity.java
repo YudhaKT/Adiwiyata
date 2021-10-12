@@ -42,6 +42,7 @@ public class TambahTnmnActivity extends AppCompatActivity{
     EditText etDeskripsi;
     ImageView IvImageUrl;
     String etImageUrl = "";
+    String[] dataInput;
     Integer Total;
     Button btnTambah;
     ImageButton btnBack;
@@ -50,6 +51,7 @@ public class TambahTnmnActivity extends AppCompatActivity{
     FirebaseDatabase database;
     DatabaseReference myref;
     DatabaseReference myref2;
+    DatabaseReference myref3;
     StorageReference mystor;
 
 
@@ -138,8 +140,8 @@ public class TambahTnmnActivity extends AppCompatActivity{
                 finish();
             }
         });
-        myref2 = database.getReference().child("Total");
-        myref2.addValueEventListener(new ValueEventListener() {
+        myref3 = database.getReference().child("Total");
+        myref3.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Total = Integer.valueOf(snapshot.getValue().toString());
@@ -199,7 +201,7 @@ public class TambahTnmnActivity extends AppCompatActivity{
                             }
                             else {
                                 uploadPicture();
-                                Tanaman tnmn = new Tanaman(id, nama, latin, imageUrl, kingdom, clade, order, family, genus, species, deskripsi);
+                                dataInput = {id, nama, latin, imageUrl, kingdom, clade, order, family, genus, species, deskripsi};
                                 myref.child(id).setValue(tnmn).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
@@ -220,7 +222,7 @@ public class TambahTnmnActivity extends AppCompatActivity{
                                         Toast.makeText(TambahTnmnActivity.this, "Data Gagal ditambahkan", Toast.LENGTH_SHORT).show();
                                     }
                                 });
-                                myref2.setValue(Total).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                myref3.setValue(Total).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
                                     /**Method yang disengaja kosong. Tidak suatu perintah*/
