@@ -17,6 +17,7 @@ public class Tanaman {
 
     public String getId() {
         return id;
+        //untuk mengambil id tanaman
     }
 
     public void setId(String id) {
