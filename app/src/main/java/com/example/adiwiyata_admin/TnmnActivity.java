@@ -114,4 +114,3 @@ public class TnmnActivity extends AppCompatActivity {
     }
 
 }
-/**Halo yud iki munir gitu*/
