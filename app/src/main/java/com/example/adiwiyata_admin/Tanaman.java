@@ -106,30 +106,37 @@ public class Tanaman {
         this.deskripsi= deskripsi;
     }
 
-    public Tanaman(String id, String nama, String latin, String imageUrl, String kingdom, String clade, String order, String family, String genus, String species, String deskripsi) {
-        this.id = id;
-        this.nama = nama;
-        this.latin = latin;
-        this.imageUrl = imageUrl;
-        this.kingdom = kingdom;
-        this.clade = clade;
-        this.order = order;
-        this.family = family;
-        this.genus = genus;
-        this.species = species;
-        this.deskripsi = deskripsi;
-    }
-    public Tanaman(String nama, String latin, String imageUrl, String kingdom, String clade, String order, String family, String genus, String species, String deskripsi) {
-        this.nama = nama;
-        this.latin = latin;
-        this.imageUrl = imageUrl;
-        this.kingdom = kingdom;
-        this.clade = clade;
-        this.order = order;
-        this.family = family;
-        this.genus = genus;
-        this.species = species;
-        this.deskripsi = deskripsi;
+    public Tanaman(String[] value)
+    {
+        for (int i = 0; i < 11; i++) {
+            switch (i) {
+                case 0:
+                    this.id = value[i];
+                case 1:
+                    this.nama = value[i];
+                case 2:
+                    this.latin = value[i];
+                case 3:
+                    this.imageUrl = value[i];
+                case 4:
+                    this.kingdom = value[i];
+                case 5:
+                    this.clade = value[i];
+                case 6:
+                    this.order = value[i];
+                case 7:
+                    this.family = value[i];
+                case 8:
+                    this.genus = value[i];
+                case 9:
+                    this.species = value[i];
+                case 10:
+                    this.deskripsi = value[i];
+                case 11:
+                    break;
+                default: //nothing
+            }
+        }
     }
 
     public Tanaman(String id, String nama, String latin, String imageUrl)
