@@ -47,7 +47,6 @@ public class ListTanaman extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         fetchData = new ArrayList<>();
         fetchData2 = new ArrayList<>();
-
         databaseReference = FirebaseDatabase.getInstance().getReference("tnmn");
         databaseReference.orderByChild("nama").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
