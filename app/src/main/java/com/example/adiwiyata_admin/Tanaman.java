@@ -105,31 +105,49 @@ public class Tanaman {
     public void setDeskripsi(String deskripsi) {
         this.deskripsi= deskripsi;
     }
-
-    public Tanaman(String id, String nama, String latin, String imageUrl, String kingdom, String clade, String order, String family, String genus, String species, String deskripsi) {
-        this.id = id;
-        this.nama = nama;
-        this.latin = latin;
-        this.imageUrl = imageUrl;
-        this.kingdom = kingdom;
-        this.clade = clade;
-        this.order = order;
-        this.family = family;
-        this.genus = genus;
-        this.species = species;
-        this.deskripsi = deskripsi;
-    }
-    public Tanaman(String nama, String latin, String imageUrl, String kingdom, String clade, String order, String family, String genus, String species, String deskripsi) {
-        this.nama = nama;
-        this.latin = latin;
-        this.imageUrl = imageUrl;
-        this.kingdom = kingdom;
-        this.clade = clade;
-        this.order = order;
-        this.family = family;
-        this.genus = genus;
-        this.species = species;
-        this.deskripsi = deskripsi;
+    
+    public Tanaman(String[] value)
+    {
+        for (int i = 0; i < 11; i++) {
+            switch (i) {
+                case 0:
+                    this.id = value[i];
+                    break;
+                case 1:
+                    this.nama = value[i];
+                    break;
+                case 2:
+                    this.latin = value[i];
+                    break;
+                case 3:
+                    this.imageUrl = value[i];
+                    break;
+                case 4:
+                    this.kingdom = value[i];
+                    break;
+                case 5:
+                    this.clade = value[i];
+                    break;
+                case 6:
+                    this.order = value[i];
+                    break;
+                case 7:
+                    this.family = value[i];
+                    break;
+                case 8:
+                    this.genus = value[i];
+                    break;
+                case 9:
+                    this.species = value[i];
+                    break;
+                case 10:
+                    this.deskripsi = value[i];
+                    break;
+                case 11:
+                    break;
+                default: //nothing
+            }
+        }
     }
 
     public Tanaman(String id, String nama, String latin, String imageUrl)

@@ -51,7 +51,7 @@ public class EditTnmnActivity extends AppCompatActivity {
     String temp_genus;
     String temp_species;
     String temp_deskripsi;
-
+    String[] dataInput;
     ImageView IvImageUrl;
     String etImageUrl;
     Integer Total;
@@ -269,7 +269,8 @@ public class EditTnmnActivity extends AppCompatActivity {
                                         mystor.child(temp_imageUrl).delete();
                                         uploadPicture();
                                     }
-                                    Tanaman tnmn = new Tanaman(id, nama, latin, imageUrl, kingdom, clade, order, family, genus, species, deskripsi);
+                                    dataInput = {id, nama, latin, imageUrl, kingdom, clade, order, family, genus, species, deskripsi};
+                                    Tanaman tnmn = new Tanaman(dataInput);
                                     myref.setValue(tnmn).addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void aVoid) {
