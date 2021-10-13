@@ -189,11 +189,7 @@ public class TambahTnmnActivity extends AppCompatActivity{
                 final String imageUrl = etImageUrl;
                 final String kingdom = etKingdom.getText().toString();
                 final String clade  = etClade.getText().toString();
-                final String order  = etOrder.getText().toString();
-                final String family = etFamily.getText().toString();
-                final String genus = etGenus.getText().toString();
-                final String species  = etSpecies.getText().toString();
-                final String deskripsi = etDeskripsi.getText().toString();
+               
                 Total = Total + 1;
                 final String id = Total.toString();
                 if (latin.equals("") || nama.equals("") || imageUrl.equals("") || kingdom.equals("") || clade.equals("") || order.equals("") || family.equals("") || genus.equals("") || species.equals("") || deskripsi.equals("")){
