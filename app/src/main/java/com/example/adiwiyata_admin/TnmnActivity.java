@@ -53,16 +53,17 @@ public class TnmnActivity extends AppCompatActivity {
         String nama = intent.getStringExtra("nama");
         StorageReference storageRef = FirebaseStorage.getInstance().getReference();
 
-        tvNama = findViewById(R.id.tv_nama);
-        tvLatin = findViewById(R.id.tv_latin);
-        ivImageUrl = findViewById(R.id.iv_imageUrl);
-        tvKingdom = findViewById(R.id.tv_kingdom);
-        tvClade = findViewById(R.id.tv_clade);
         tvOrder = findViewById(R.id.tv_order);
         tvFamily = findViewById(R.id.tv_family);
         tvGenus = findViewById(R.id.tv_genus);
         tvSpecies = findViewById(R.id.tv_species);
         btnBack = findViewById(R.id.btn_back);
+        
+        tvNama = findViewById(R.id.tv_nama);
+        tvLatin = findViewById(R.id.tv_latin);
+        ivImageUrl = findViewById(R.id.iv_imageUrl);
+        tvKingdom = findViewById(R.id.tv_kingdom);
+        tvClade = findViewById(R.id.tv_clade);
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("tnmn").child(nama);
         databaseReference.addValueEventListener(new ValueEventListener() {
