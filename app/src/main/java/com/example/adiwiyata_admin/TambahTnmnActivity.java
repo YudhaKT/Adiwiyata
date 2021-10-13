@@ -175,6 +175,13 @@ public class TambahTnmnActivity extends AppCompatActivity{
         btnTambah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                
+                final String order  = etOrder.getText().toString();
+                final String family = etFamily.getText().toString();
+                final String genus = etGenus.getText().toString();
+                final String species  = etSpecies.getText().toString();
+                final String deskripsi = etDeskripsi.getText().toString();
+                
                 final String nama = etNama.getText().toString();
                 final String latin = etLatin.getText().toString();
                 final String imageUrl = etImageUrl;
