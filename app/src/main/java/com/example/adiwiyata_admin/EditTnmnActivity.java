@@ -61,8 +61,8 @@ public class EditTnmnActivity extends AppCompatActivity {
     Uri imageUri;
     static EditTnmnActivity ActivityB;
     FirebaseDatabase database;
-    DatabaseReference myref;
-    DatabaseReference myref2;
+    DatabaseReference myreference;
+    DatabaseReference myreference2;
     DatabaseReference databaseReference;
     StorageReference mystor;
     StorageReference storageRef = FirebaseStorage.getInstance().getReference();
@@ -149,8 +149,8 @@ public class EditTnmnActivity extends AppCompatActivity {
         btnBack = findViewById(R.id.btn_back);
         database = FirebaseDatabase.getInstance();
         mystor = FirebaseStorage.getInstance().getReference();
-        myref = database.getReference().child("tnmn").child(id);
-        myref.addValueEventListener(new ValueEventListener() {
+        myreference = database.getReference().child("tnmn").child(id);
+        myreference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 temp_latin = dataSnapshot.child("latin").getValue().toString();
@@ -243,8 +243,8 @@ public class EditTnmnActivity extends AppCompatActivity {
         if (latin.equals("") || nama.equals("") || imageUrl.equals("") || kingdom.equals("") || clade.equals("") || order.equals("") || family.equals("") || genus.equals("") || species.equals("") || deskripsi.equals("")){
             Toast.makeText(EditTnmnActivity.this, "Data Harus diisi semua!!", Toast.LENGTH_SHORT).show();
         }else {
-            myref2 = FirebaseDatabase.getInstance().getReference().child("tnmn");
-            myref2.orderByChild("nama").equalTo(nama).addValueEventListener(new ValueEventListener() {
+            myreference2 = FirebaseDatabase.getInstance().getReference().child("tnmn");
+            myreference2.orderByChild("nama").equalTo(nama).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     if(snapshot.exists()) {
@@ -271,7 +271,7 @@ public class EditTnmnActivity extends AppCompatActivity {
                                     }
                                     dataInput = {id, nama, latin, imageUrl, kingdom, clade, order, family, genus, species, deskripsi};
                                     Tanaman tnmn = new Tanaman(dataInput);
-                                    myref.setValue(tnmn).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    myreference.setValue(tnmn).addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void aVoid) {
                                             Toast.makeText(EditTnmnActivity.this, "Data berhasil ditambahkan", Toast.LENGTH_SHORT).show();
@@ -320,7 +320,7 @@ public class EditTnmnActivity extends AppCompatActivity {
         positiveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myref.removeValue();
+                myreference.removeValue();
                 mystor.child(temp_imageUrl).delete();
                 ListTanaman.getInstance().finish();
                 startActivity(new Intent(EditTnmnActivity.this, ListTanaman.class));
