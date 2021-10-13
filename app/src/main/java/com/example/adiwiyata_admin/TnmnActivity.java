@@ -33,15 +33,15 @@ public class TnmnActivity extends AppCompatActivity {
     
     ImageView ivImageUrl;
     ImageButton btnBack;
-    String temp_latin;
-    String temp_nama;
-    String temp_imageUrl;
-    String temp_kingdom;
-    String temp_clade;
-    String temp_order;
-    String temp_family;
-    String temp_genus;
-    String temp_species;
+    String temps_latin;
+    String temps_nama;
+    String temps_imageUrl;
+    String temps_kingdom;
+    String temps_clade;
+    String temps_order;
+    String temps_family;
+    String temps_genus;
+    String temps_species;
     
     DatabaseReference databaseReference;
 
@@ -69,16 +69,16 @@ public class TnmnActivity extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                temp_clade = dataSnapshot.child("clade").getValue().toString();
-                temp_order = dataSnapshot.child("order").getValue().toString();
-                temp_family = dataSnapshot.child("family").getValue().toString();
-                temp_genus = dataSnapshot.child("genus").getValue().toString();
-                temp_species= dataSnapshot.child("species").getValue().toString();
-                temp_latin = dataSnapshot.child("latin").getValue().toString();
-                temp_nama = dataSnapshot.child("nama").getValue().toString();
-                temp_imageUrl = dataSnapshot.child("imageUrl").getValue().toString();
-                temp_kingdom = dataSnapshot.child("kingdom").getValue().toString();
-                storageRef.child(temp_imageUrl).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                temps_clade = dataSnapshot.child("clade").getValue().toString();
+                temps_order = dataSnapshot.child("order").getValue().toString();
+                temps_family = dataSnapshot.child("family").getValue().toString();
+                temps_genus = dataSnapshot.child("genus").getValue().toString();
+                temps_species= dataSnapshot.child("species").getValue().toString();
+                temps_latin = dataSnapshot.child("latin").getValue().toString();
+                temps_nama = dataSnapshot.child("nama").getValue().toString();
+                temps_imageUrl = dataSnapshot.child("imageUrl").getValue().toString();
+                temps_kingdom = dataSnapshot.child("kingdom").getValue().toString();
+                storageRef.child(temps_imageUrl).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
                         Glide.with(ivImageUrl.getContext())
@@ -86,15 +86,15 @@ public class TnmnActivity extends AppCompatActivity {
                                 .into(ivImageUrl);
                     }
                 });
-                temp_clade = temp_clade.replace(", ", "\n");
-                tvLatin.setText(temp_latin);
-                tvNama.setText(temp_nama);
-                tvKingdom.setText(temp_kingdom);
-                tvClade.setText(temp_clade);
-                tvOrder.setText(temp_order);
-                tvFamily.setText(temp_family);
-                tvGenus.setText(temp_genus);
-                tvSpecies.setText(temp_species);
+                temps_clade = temps_clade.replace(", ", "\n");
+                tvLatin.setText(temps_latin);
+                tvNama.setText(temps_nama);
+                tvKingdom.setText(temps_kingdom);
+                tvClade.setText(temps_clade);
+                tvOrder.setText(temps_order);
+                tvFamily.setText(temps_family);
+                tvGenus.setText(temps_genus);
+                tvSpecies.setText(temps_species);
 
             }
 
